@@ -7,7 +7,7 @@ I'm an ECE student intereseted in embedded systems, DSP, and power electronics.
 
 
 ## Cornell University Autonomous Underwater Vehicle
-- [Hydrophone Array / Pinger Detector](/cuauv/pinger-detector)
+- [Pinger Detection](/cuauv/pinger-detection)
 - [Underwater Acoustic Modem](/cuauv/acoustic-modem)
 
 ## Havoc AI Internship
