@@ -6,13 +6,13 @@ title: Home
 I'm an ECE student intereseted in embedded systems, DSP, and power electronics. 
 
 
-## Project Team — CUAUV
+## Cornell University Autonomous Underwater Vehicle
 - [Hydrophone Array / Pinger Detector](/cuauv/pinger-detector)
 - [Underwater Acoustic Modem](/cuauv/acoustic-modem)
 
-## Internship — Havoc AI
-- [Flight Termination System Recovery](/internship/fts-recovery)
-- [Flight Controller & Camera Array](/internship/flight-controller)
+## Havoc AI Internship
+- [Flight Controller](/havoc/flight-controller)
+- [Camera Array](/havoc/camera-array)
 
 ## Personal Projects
 - Coming soon
