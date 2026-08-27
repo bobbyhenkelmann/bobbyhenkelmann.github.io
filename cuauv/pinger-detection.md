@@ -10,8 +10,7 @@ title: Pinger Detection
   <img src="/images/h2o3dbottom.png" alt="H20 3D bottom view" style="width: 48%;">
 </div>
 
-## Overview
-[1-2 sentences: what this is, in plain terms — the "elevator pitch" someone skimming should read first]
+A key component of the RoboSub Autonomy Challenge is the ability to listen for pingers, which are placed in front of two tasks in the pool to tell a robot where they are and in which order to attempt the tasks to receive maximum points. To solve this, I built Hydrophones Board, which uses a phased array of 4 Teledyne TC4013 (link) hydrophones to identify pings and the heading to their source. All of the amplification, filtering, and signal processing is done on this single PCB, which passes the results on to our sub's main computer over RS232. 
 
 ## The Problem
 [2-4 sentences: what needed solving, why it mattered, what constraints you were working under]
