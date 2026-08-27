@@ -19,8 +19,12 @@ title: Pinger Detection
 ## What I Built
 [The technical meat. Your approach, key design decisions, and *why* you made them — this is the part that shows engineering judgment, not just "I used X." Trade-offs are good to mention here.]
 
-![detail photo 1](/images/[project-folder]/detail-1.jpg)
-![detail photo 2](/images/[project-folder]/detail-2.jpg)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="/images/h2obottom.png" alt="H2O board bottom" style="width: 23%;">
+  <img src="/images/h2ognd.png" alt="H2O board ground layer" style="width: 23%;">
+  <img src="/images/h2opower.png" alt="H2O board power layer" style="width: 23%;">
+  <img src="/images/h2otop.png" alt="H2O board top" style="width: 23%;">
+</div>
 
 ## Results
 [Did it work? Specs, measurements, test data if you have it. If it's still in progress, say so plainly — "currently in bring-up" is a fine, honest status.]
