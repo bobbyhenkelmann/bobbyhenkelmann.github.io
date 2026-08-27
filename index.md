@@ -5,7 +5,7 @@ title: Home
 
 I'm an ECE student at Cornell interested in embedded systems, DSP, and power electronics. 
 
-
+<img src="/images/Standard_CUAUV.jpg" alt="auv" width="98%;">
 ## Cornell University Autonomous Underwater Vehicle
 CUAUV competes annually in [RoboSub](https://robosub.org/programs/2025/), building a new submarine every year to compete with teams around the world. I've primarily worked on our acoustic systems (see below), and am currently a co-lead for the electrical subteam. 
 - [Pinger Detection](/cuauv/pinger-detection.md)
