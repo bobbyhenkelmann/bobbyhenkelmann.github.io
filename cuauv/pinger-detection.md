@@ -1,6 +1,6 @@
 ---
 layout: page
-title: [Project Name]
+title: Pinger Detection
 ---
 
 [← Back to home](/)
