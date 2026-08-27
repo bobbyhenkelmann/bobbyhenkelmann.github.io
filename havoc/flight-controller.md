@@ -1,6 +1,6 @@
 ---
 layout: page
-title: [Project Name]
+title: Flight Controller
 ---
 
 [← Back to home](/)
