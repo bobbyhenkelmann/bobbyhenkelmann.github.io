@@ -11,6 +11,7 @@ CUAUV competes annually in [RoboSub](https://robosub.org/programs/2025/), buildi
 - [Pinger Detection](/cuauv/pinger-detection.md)
 - [Underwater Acoustic Modem](/cuauv/acoustic-modem.md)
 
+<img src="/images/havoc-logo.png" alt="havoc" width="98%;">
 ## Havoc AI Internship
 [Havoc AI](https://www.havocai.com/) is a rapidly growing company building all-domain collaborative autonomy. I spent a summer in their Unmanned Air Systems division building drone hardware. A lot of this work is proprietary, but I can share at a high level what I did and images that were cleared for release. 
 - [Flight Controller](/havoc/flight-controller.md)
