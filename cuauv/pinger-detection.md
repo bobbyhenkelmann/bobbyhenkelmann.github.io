@@ -5,8 +5,8 @@ title: Pinger Detection
 
 [← Back to home](/)
 
-![h20 3d](/images/h203dtop.png)
-![h20 3d](/images/h203dbottom.png)
+![h20 3d](/images/h2o3dtop.png)
+![h20 3d](/images/h2o3dbottom.png)
 
 ## Overview
 [1-2 sentences: what this is, in plain terms — the "elevator pitch" someone skimming should read first]
