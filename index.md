@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-I'm an ECE student intereseted in embedded systems, DSP, and power electronics. 
+I'm an ECE student at Cornell interested in embedded systems, DSP, and power electronics. 
 
 
 ## Cornell University Autonomous Underwater Vehicle
