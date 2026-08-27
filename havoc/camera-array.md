@@ -1,6 +1,6 @@
 ---
 layout: page
-title: [Project Name]
+title: Camera Array
 ---
 
 [← Back to home](/)
