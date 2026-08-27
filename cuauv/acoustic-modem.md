@@ -1,11 +1,11 @@
 ---
 layout: page
-title: [Project Name]
+title: Acoustic Modem
 ---
 
 [← Back to home](/)
 
-![hero photo](/images/[project-folder]/hero.jpg)
+![bucket test](/images/[project-folder]/hero.jpg)
 
 ## Overview
 [1-2 sentences: what this is, in plain terms — the "elevator pitch" someone skimming should read first]
