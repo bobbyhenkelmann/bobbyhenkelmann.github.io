@@ -5,8 +5,10 @@ title: Pinger Detection
 
 [← Back to home](/)
 
-![h20 3d](/images/h2o3dtop.png)
-![h20 3d](/images/h2o3dbottom.png)
+<div style="display: flex; gap: 10px;">
+  <img src="/images/h2o3dtop.png" alt="H20 3D top view" style="width: 48%;">
+  <img src="/images/h2o3dbottom.png" alt="H20 3D bottom view" style="width: 48%;">
+</div>
 
 ## Overview
 [1-2 sentences: what this is, in plain terms — the "elevator pitch" someone skimming should read first]
