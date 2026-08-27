@@ -5,7 +5,7 @@ title: Pinger Detection
 
 [← Back to home](/)
 
-![hero photo](/images/[project-folder]/hero.jpg)
+![h20 3d](/images/h203dtop.png)
 
 ## Overview
 [1-2 sentences: what this is, in plain terms — the "elevator pitch" someone skimming should read first]
