@@ -22,6 +22,18 @@ Pulses from the pinger travel as pressure waves through the water, which can be 
 
 But how do we calculate where it came from? For that we can use a few more transducers and some convenient geometry. 
 
+Say we model the situation as in the image above, with sound waves from a pinger pulse approaching with velocity v (in a pool at 70°F, about 1480 m/s) and heading 𝛳. Note the the transducer array is a right isosceles triange with two equal side lengths d. This wave front will hit transducer 1 first, then transducer 3, followed by transducer 2. As it turns out, this order, and the timing delays between each transducer, are directly related to the approach angle 𝛳: 
+
+Δx, the difference in path length between a pair of transducers, is directly proportional to something we can measure: the relative phase in the sinusoidal voltages at each transducer. 
+$$
+\Delta x = \frac{2\pi f \phi}{v}
+$$
+So if we combine our two equations for path length difference we get the equation below for heading purely as a function of phase differences, with no dependence on d: 
+$$
+\theta = \operatorname{atan2}(\phi_{23}, \phi_{21})
+$$
+
+
 ## What I Built
 [The technical meat. Your approach, key design decisions, and *why* you made them — this is the part that shows engineering judgment, not just "I used X." Trade-offs are good to mention here.]
 
