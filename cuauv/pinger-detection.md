@@ -47,8 +47,10 @@ $$
 
 Keep in mind this is just for horizontal heading. We'll add a 4th transducer to account for vertical displacement in a similar fashion, but in the relatively shallow competition pool the horizontal is much more relevant to us. 
 
-## What I Built
-[The technical meat. Your approach, key design decisions, and *why* you made them — this is the part that shows engineering judgment, not just "I used X." Trade-offs are good to mention here.]
+## Analog Front End
+Next I'll dive a little deeper into the hardware that actually implements this solution. The job of the analog front end is to supply a clean, sinusoidal voltage from the pulse produced by a pinger to an ADC. 
+
+That starts at the output of the transducer. This board uses Teledyne TC4013 hydrophones, 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <img src="/images/h2obottom.png" alt="H2O board bottom" style="width: 23%;">
