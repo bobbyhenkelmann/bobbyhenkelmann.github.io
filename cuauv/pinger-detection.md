@@ -33,7 +33,7 @@ $$
 So if we combine our two equations for path length difference we get the equation below for heading purely as a function of phase differences, with no dependence on $d$:
 
 $$
-\theta = \operatorname{atan2}(\phi_{23},\phi_{21})
+\theta = \text{atan2}(\phi_{23},\phi_{21})
 $$
 
 
