@@ -13,7 +13,7 @@ title: Pinger Detection
 ## Motivation
 A key component of the RoboSub Autonomy Challenge is the ability to listen for acoustic pingers in the pool. During each competition run, two Teledyne Benthos ALP-365 pingers placed in front of tasks to communicate to the AUV which one to complete first for maximum points. They do this by sending out periodic 4 ms pulses at a specified frequency (at RoboSub there are usually 4 courses in the same pool being used at once, so each course has to have its own frequency). So to make these signals useful, we need a way to characterize their frequency and direction of origin. 
 
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; justify-content: center; gap: 10px;">
   <img src="/images/highlevel.png" alt="H20 3D top view" style="width: 90%;">
 </div>
 
@@ -22,11 +22,11 @@ Pulses from the pinger travel as pressure waves through the water, which can be 
 
 But how do we calculate where it came from? For that we can use a few more transducers and some convenient geometry. 
 
-<div style="display: flex; gap: 10px;">
+<div style="display: flex; justify-content: center; gap: 10px;">
   <img src="/images/pingsetup.png" alt="H20 3D top view" style="width: 60%;">
 </div>
 
-Say we model the situation as in the image above, with sound waves from a pinger pulse approaching with velocity v (in a pool at 70°F, about 1480 m/s) and heading 𝛳. Note the the transducer array is a right isosceles triange with two equal side lengths d. This wave front will hit transducer 1 first, then transducer 3, followed by transducer 2. As it turns out, this order, and the timing delays between each transducer, are directly related to the approach angle 𝛳: 
+Say we model the situation as in the image above, with sound waves from a pinger pulse approaching with horizontal velocity v (in a pool at 70°F, about 1480 m/s) and heading 𝛳. Note the the transducer array is a right isosceles triange with two equal side lengths d. This wave front will hit transducer 1 first, then transducer 3, followed by transducer 2. As it turns out, this order, and the timing delays between each transducer, are directly related to the approach angle 𝛳: 
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
   <img src="/images/x12.png" alt="H2O 3D top view" style="height: 300px; width: auto;">
@@ -45,6 +45,7 @@ $$
 \theta = \text{atan2}(\phi_{23},\phi_{21})
 $$
 
+Keep in mind this is just for horizontal heading. We'll add a 4th transducer to account for vertical displacement in a similar fashion, but in the relatively shallow competition pool the horizontal is much more relevant to us. 
 
 ## What I Built
 [The technical meat. Your approach, key design decisions, and *why* you made them — this is the part that shows engineering judgment, not just "I used X." Trade-offs are good to mention here.]
