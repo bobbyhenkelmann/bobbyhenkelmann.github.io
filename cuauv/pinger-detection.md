@@ -22,7 +22,16 @@ Pulses from the pinger travel as pressure waves through the water, which can be 
 
 But how do we calculate where it came from? For that we can use a few more transducers and some convenient geometry. 
 
+<div style="display: flex; gap: 10px;">
+  <img src="/images/pingsetup.png" alt="H20 3D top view" style="width: 60%;">
+</div>
+
 Say we model the situation as in the image above, with sound waves from a pinger pulse approaching with velocity v (in a pool at 70°F, about 1480 m/s) and heading 𝛳. Note the the transducer array is a right isosceles triange with two equal side lengths d. This wave front will hit transducer 1 first, then transducer 3, followed by transducer 2. As it turns out, this order, and the timing delays between each transducer, are directly related to the approach angle 𝛳: 
+
+<div style="display: flex; gap: 10px;">
+  <img src="/images/x12.png" alt="H20 3D top view" style="width: 40%;">
+  <img src="/images/x32.png" alt="H20 3D top view" style="width: 40%;">
+</div>
 
 $\Delta x$, the difference in path length between a pair of transducers, is directly proportional to something we can measure: the relative phase in the sinusoidal voltages at each transducer.
 
