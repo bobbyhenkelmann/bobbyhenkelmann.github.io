@@ -6,10 +6,8 @@ title: Pinger Detection
 [← Back to home](/)
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <img src="/images/h2o3dtop.png" alt="H2O 3D top view"
-       style="width: 48%; height: 300px; object-fit: contain;">
-  <img src="/images/h2o3dbottom.png" alt="H2O 3D bottom view"
-       style="width: 48%; height: 300px; object-fit: contain;">
+  <img src="/images/x12.png" alt="H2O 3D top view" style="height: 300px; width: auto;">
+  <img src="/images/x32.png" alt="H2O 3D bottom view" style="height: 300px; width: auto;">
 </div>
 
 ## Motivation
