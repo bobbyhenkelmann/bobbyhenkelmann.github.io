@@ -13,6 +13,10 @@ title: Pinger Detection
 ## Motivation
 A key component of the RoboSub Autonomy Challenge is the ability to listen for acoustic pingers in the pool. During each competition run, two Teledyne Benthos ALP-365 pingers placed in front of tasks to communicate to the AUV which one to complete first for maximum points. They do this by sending out periodic 4 ms pulses at a specified frequency (at RoboSub there are usually 4 courses in the same pool being used at once, so each course has to have its own frequency). So to make these signals useful, we need a way to characterize their frequency and direction of origin. 
 
+<div style="display: flex; gap: 10px;">
+  <img src="/images/highlevel.png" alt="H20 3D top view" style="width: 90%;">
+</div>
+
 ## High Level Idea
 Pulses from the pinger travel as pressure waves through the water, which can be converted to a more useful analog voltage by a transducer. With some additional amplification and filtering, we can eliminate much of the ambient pool noise and higher order harmonics, sample the result faster than the Nyquist Rate (in this case, 80 ksps), and at that point we have what we need to calculate the strength of the signal's frequency components. 
 
