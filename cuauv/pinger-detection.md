@@ -5,9 +5,11 @@ title: Pinger Detection
 
 [← Back to home](/)
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/h2o3dtop.png" alt="H20 3D top view" style="width: 48%;">
-  <img src="/images/h2o3dbottom.png" alt="H20 3D bottom view" style="width: 48%;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img src="/images/h2o3dtop.png" alt="H2O 3D top view"
+       style="width: 48%; height: 300px; object-fit: contain;">
+  <img src="/images/h2o3dbottom.png" alt="H2O 3D bottom view"
+       style="width: 48%; height: 300px; object-fit: contain;">
 </div>
 
 ## Motivation
@@ -28,9 +30,11 @@ But how do we calculate where it came from? For that we can use a few more trans
 
 Say we model the situation as in the image above, with sound waves from a pinger pulse approaching with velocity v (in a pool at 70°F, about 1480 m/s) and heading 𝛳. Note the the transducer array is a right isosceles triange with two equal side lengths d. This wave front will hit transducer 1 first, then transducer 3, followed by transducer 2. As it turns out, this order, and the timing delays between each transducer, are directly related to the approach angle 𝛳: 
 
-<div style="display: flex; gap: 10px;">
-  <img src="/images/x12.png" alt="H20 3D top view" style="width: 40%;">
-  <img src="/images/x32.png" alt="H20 3D top view" style="width: 40%;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img src="/images/x12.png" alt="H2O 3D top view"
+       style="width: 40%; height: 300px; object-fit: contain;">
+  <img src="/images/x32.png" alt="H2O 3D top view"
+       style="width: 40%; height: 300px; object-fit: contain;">
 </div>
 
 $\Delta x$, the difference in path length between a pair of transducers, is directly proportional to something we can measure: the relative phase in the sinusoidal voltages at each transducer.
