@@ -93,6 +93,16 @@ Next up in the signal chain is filtering. A pool full of people and submarines s
 
 The filters for this board were designed using Analog Devices' <a href="https://tools.analog.com/en/filterwizard/?ADICID=PDSR_Global_Filter-Wizard-NB_Google_PSC_202603&gad_source=1&gad_campaignid=23683883414&gbraid=0AAAAACxqTx_Xfe7f-cRkkzkx6p-IV7UOw&gclid=CjwKCAjwoOjVBhArEiwAUwDakwNL_bR7jN2Bn_kd2Vxo9xlC5q8A0Da15s5ZbXMa50bfxaklUu15phoCGoQQAvD_BwE" target="_blank" rel="noopener noreferrer">filter wizard</a> tool, as shown above. This configuration produces a passband from 25.5 kHz to 41.5 kHz and relatively low passband ripple in exchange for a more gradual rolloff. For this application, our main concern beyond passing the right frequencies is phase matching between channels, and this design strikes a good balance between those demands and noise rejection. 
 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/filter.png" alt="H20 3D top view" style="width: 80%;">
+</div>
+
+Above is the filter schematic realized in Altium. 
+
+Testing
+
+##Analog to Digital
+
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
