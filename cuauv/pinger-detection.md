@@ -50,7 +50,27 @@ Keep in mind this is just for horizontal heading. We'll add a 4th transducer to 
 ## Analog Front End
 Next I'll dive a little deeper into the hardware that actually implements this solution. The job of the analog front end is to supply a clean, sinusoidal voltage from the pulse produced by a pinger to an ADC. 
 
-That starts at the output of the transducer. This board uses Teledyne TC4013 hydrophones, 
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/piezomodel.png" alt="H20 3D top view" style="width: 60%;">
+</div>
+
+
+That starts at the output of the transducer, which houses a piezoelectric material that produces charge in response to mechanical stress. This can be modeled as a current source whose value is the rate of change of the charge on a capacitor (see this <a href="https://www.allaboutcircuits.com/technical-articles/understanding-and-modeling-piezoelectric-sensors/" target="_blank" rel="noopener noreferrer">article</a> for an explanation). 
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img src="/images/tc4013model.png" alt="H2O 3D top view" style="height: 300px; width: auto;">
+  <img src="/images/tc4013sensitivity.png" alt="H2O 3D bottom view" style="height: 300px; width: auto;">
+</div>
+
+By itself, this arrangement would produce a small voltage across the terminals of the capacitor. If we multiply the rated acoustic output of our ALP-365 pinger (177 dB μPa @ 1m) with the receiving sensitivity of our TC4013 hydrophones (about -213 dB V/μPa @ 1m), this comes out to 15.8 mV RMS or 22.4 mV amplitude around the closest range we would see. A little small, but not an unworkable signal strength. The bigger issue is when this circuit has to drive a filter or ADC input. In this 1m scenario the charge that accumulates on the capacitor has an RMS value of just 47.5 pC, which means any load placed on the signal can significantly alter it. 
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/amp.png" alt="H20 3D top view" style="width: 60%;">
+</div>
+
+
+
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <img src="/images/h2obottom.png" alt="H2O board bottom" style="width: 23%;">
