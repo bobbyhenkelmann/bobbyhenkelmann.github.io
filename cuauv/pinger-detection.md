@@ -75,7 +75,7 @@ $V_{\text{out}} = -\frac{Q}{C_f}$
 
 So building on our prediction for Q from earlier, we can estimate the voltage amplitude coming out of these amplifiers: 
 
-$V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\,\text{V}$
+$V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\\text{V}$
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
