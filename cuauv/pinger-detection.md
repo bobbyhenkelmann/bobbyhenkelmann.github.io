@@ -71,11 +71,15 @@ By itself, this arrangement would produce a small voltage across the terminals o
 
 The charge amplifier circuit above remedies many of these issues. It acts as an integrator that converts charge from the piezo into voltage, with high input impedance to minimize signal loss. Additionally, it allows us to set the reference voltage at mid-rail instead of 0 (Vs+ = 5V, REF = 2.5V). The voltage seen out of this amplifier, as a function of Q, is: 
 
-$V_{\text{out}} = -\frac{Q}{C_f}$
+$$
+V_{\text{out}} = -\frac{Q}{C_f}
+$$
 
 So building on our prediction for Q from earlier, we can estimate the voltage amplitude coming out of these amplifiers: 
 
-$V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\\text{V}$
+$$
+V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\\text{V}
+$$
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
