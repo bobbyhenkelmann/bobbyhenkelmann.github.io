@@ -110,15 +110,14 @@ At this point, the voltage out of our filters looks something like the image bel
 
 The next task is to sample the signal, which means driving an ADC to fill a buffer of size N with samples, and once its full performing our signal analysis to calculate frequency, phase and heading. The next section will cover that processing in firmware, but there are a few constraints for sampling that have to be resolved first. 
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="/images/samplingstate.png" alt="H20 3D top view" style="width: 60%;">
-</div>
-
 First, each of the 4 channels needs to be sampled simultaneously, or as close as possible. Our method for heading calculation is completely dependent on accurate phase information, which we can't get if there's some unknown delay in the sampling of each channel. 
 
 Second, the Shannon-Nyquist Sampling Theorem tells us that in order to reconstruct a continous analog signal from its samples, our sampling rate needs to be greater than twice the highest frequency component of the signal. In this case, the Benthos ALP-365 can go up to 40 kHz, which means our minimum sampling rate is 80 kHz. 
 
-Finally, because we receive pulses instead of a continuous sinusoid at 25-40 kHz, we have to be able to sample and process fast enough to guarantee that for each pulse, we will have a full buffer of samples that sits completely inside it. 
+Finally, because we receive pulses instead of a continuous sinusoid at 25-40 kHz, we have to be able to sample and process fast enough to guarantee that for each pulse, we will have a full buffer of samples that sits completely inside it. In other words, we need to continuously fill new buffers every 2 ms, if not faster, and for our processing of those buffers to be able to keep up with that pace. 
+
+##Two Methods
+The simpler way to approach this is to use internal ADCs on the STM32. The chip used for this project, an H7 series, has 3 separate ADC peripherals with 16 bit resolution that can run comfortably over 1Msps, easily hitting the requirements for sampling of a single channel. 
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
