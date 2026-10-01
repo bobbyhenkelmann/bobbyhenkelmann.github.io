@@ -48,6 +48,7 @@ $$
 Keep in mind this is just for horizontal heading. We'll add a 4th transducer to account for vertical displacement in a similar fashion, but in the relatively shallow competition pool the horizontal is much more relevant to us. 
 
 ## Analog Front End
+
 Next I'll dive a little deeper into the hardware that actually implements this solution. The job of the analog front end is to supply a clean, sinusoidal voltage from the pulse produced by a pinger to an ADC. 
 
 
@@ -81,6 +82,16 @@ $$
 V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\\text{V}
 $$
 
+*add scope images
+
+Next up in the signal chain is filtering. A pool full of people and submarines swimming around produces all kinds of acoustic noise that can impact our signal quality. Since we know the bandwidth of available pinger frequencies ahead of time, it makes sense to bandpass filter our signal for that range and eliminate frequency components we don't want. 
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/ad.png" alt="H20 3D top view" style="width: 80%;">
+</div>
+
+
+The filters for this board were designed using Analog Devices' <a href="https://tools.analog.com/en/filterwizard/?ADICID=PDSR_Global_Filter-Wizard-NB_Google_PSC_202603&gad_source=1&gad_campaignid=23683883414&gbraid=0AAAAACxqTx_Xfe7f-cRkkzkx6p-IV7UOw&gclid=CjwKCAjwoOjVBhArEiwAUwDakwNL_bR7jN2Bn_kd2Vxo9xlC5q8A0Da15s5ZbXMa50bfxaklUu15phoCGoQQAvD_BwE" target="_blank" rel="noopener noreferrer">filter wizard</a> tool, as shown above. 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <img src="/images/h2obottom.png" alt="H2O board bottom" style="width: 23%;">
