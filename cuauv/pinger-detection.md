@@ -63,13 +63,19 @@ That starts at the output of the transducer, which houses a piezoelectric materi
   <img src="/images/tc4013sensitivity.png" alt="H2O 3D bottom view" style="height: 300px; width: auto;">
 </div>
 
-By itself, this arrangement would produce a small voltage across the terminals of the capacitor. If we multiply the rated acoustic output of our ALP-365 pinger (177 dB μPa @ 1m) with the receiving sensitivity of our TC4013 hydrophones (about -213 dB V/μPa @ 1m), this comes out to 15.8 mV RMS or 22.4 mV amplitude around the closest range we would see. A little small, but not an unworkable signal strength. The bigger issue is when this circuit has to drive a filter or ADC input. In this 1m scenario the charge that accumulates on the capacitor has an RMS value of just 47.5 pC, which means any load placed on the signal can significantly alter it. 
+By itself, this arrangement would produce a small voltage across the terminals of the capacitor. If we multiply the rated acoustic output of our ALP-365 pinger (177 dB μPa @ 1m) with the receiving sensitivity of our TC4013 hydrophones (about -213 dB V/μPa @ 1m), this comes out to 15.8 mV RMS or 22.4 mV amplitude around the closest range we would see. A little small, but not an unworkable signal strength. The bigger issue is when this circuit has to drive a filter or ADC input. In this 1m scenario the charge that accumulates on the capacitor has an RMS value of just 47.4 pC (Q = CV = 3nF * 15.8 mV RMS), which means any load placed on the signal can significantly alter it. 
 
 <div style="display: flex; justify-content: center; gap: 10px;">
   <img src="/images/amp.png" alt="H20 3D top view" style="width: 60%;">
 </div>
 
+The charge amplifier circuit above remedies many of these issues. It acts as an integrator that converts charge from the piezo into voltage, with high input impedance to minimize signal loss. Additionally, it allows us to set the reference voltage at mid-rail instead of 0 (Vs+ = 5V, REF = 2.5V). The voltage seen out of this amplifier, as a function of Q, is: 
 
+$V_{\text{out}} = -\frac{Q}{C_f}$
+
+So building on our prediction for Q from earlier, we can estimate the voltage amplitude coming out of these amplifiers: 
+
+$V_{\text{out, max}} = \frac{(47.4\,\text{pC})\sqrt{2}}{300\,\text{pF}} = 0.223\,\text{V}$
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
