@@ -102,7 +102,23 @@ Above is the filter schematic realized in Altium.
 Testing
 
 ## Analog to Digital
+At this point, the voltage out of our filters looks something like the image below. Pulses 4 milliseconds long, spaced by 0.5, 1 or 2 seconds depending on the settings of the pinger, with some frequency between 25 and 40 kHz.
 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/filterout.png" alt="H20 3D top view" style="width: 80%;">
+</div>
+
+The next task is to sample the signal, which means driving an ADC to fill a buffer of size N with samples, and once its full performing our signal analysis to calculate frequency, phase and heading. The next section will cover that processing in firmware, but there are a few constraints for sampling that have to be resolved first. 
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/images/samplingstate.png" alt="H20 3D top view" style="width: 60%;">
+</div>
+
+First, each of the 4 channels needs to be sampled simultaneously, or as close as possible. Our method for heading calculation is completely dependent on accurate phase information, which we can't get if there's some unknown delay in the sampling of each channel. 
+
+Second, the Shannon-Nyquist Sampling Theorem tells us that in order to reconstruct a continous analog signal from its samples, our sampling rate needs to be greater than twice the highest frequency component of the signal. In this case, the Benthos ALP-365 can go up to 40 kHz, which means our minimum sampling rate is 80 kHz. 
+
+Finally, because we receive pulses instead of a continuous sinusoid at 25-40 kHz, we have to be able to sample and process fast enough to guarantee that for each pulse, we will have a full buffer of samples that sits completely inside it. 
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
