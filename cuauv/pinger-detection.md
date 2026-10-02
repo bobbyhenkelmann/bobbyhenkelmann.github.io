@@ -116,8 +116,24 @@ Second, the Shannon-Nyquist Sampling Theorem tells us that in order to reconstru
 
 Finally, because we receive pulses instead of a continuous sinusoid at 25-40 kHz, we have to be able to sample and process fast enough to guarantee that for each pulse, we will have a full buffer of samples that sits completely inside it. In other words, we need to continuously fill new buffers every 2 ms, if not faster, and for our processing of those buffers to be able to keep up with that pace. 
 
-##Two Methods
-The simpler way to approach this is to use internal ADCs on the STM32. The chip used for this project, an H7 series, has 3 separate ADC peripherals with 16 bit resolution that can run comfortably over 1Msps, easily hitting the requirements for sampling of a single channel. 
+## Two Methods
+The simpler way to approach this is to use internal ADCs on the STM32. The chip used for this project, an H7 series, has 3 separate ADC peripherals with 16 bit resolution that can run comfortably over 1Msps, easily hitting the timing requirements of a single channel. We can also get near simultaneous sampling by triggering ADC conversions from a timer peripheral. The tradeoff is the fourth channel is more difficult to integrate, 
+
+external 
+
+adc config
+
+sampling state machine
+
+## Signal Processing
+
+IQ modulation
+
+Phase and heading calculatution
+
+state machine
+
+serial
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
